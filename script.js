@@ -1,3 +1,5 @@
+import apiKey from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const userInput = document.getElementById('userInput');
@@ -101,7 +103,7 @@ As part of five decades of French ethnographic research, this exhibition piece b
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`
+                    'Authorization': `Bearer ${apiKey}`
                 },
                 body: JSON.stringify(data)
             });
@@ -134,6 +136,14 @@ As part of five decades of French ethnographic research, this exhibition piece b
     }
 
     async function handleUserMessage() {
+        // Check for API Key
+        if (!apiKey) {
+            console.error('API_KEY is not defined. Please check config.js.');
+            addMessage("Erreur : Clé API manquante. Veuillez vérifier config.js.", 'bot');
+            userInput.disabled = true;
+            sendBtn.disabled = true;
+            return;
+        }
         const text = userInput.value.trim();
         if (!text) return;
 
