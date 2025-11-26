@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musée du Quai Branly - Maquette de pirogue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="ocean-bg"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="glass-panel info-panel">
+            <h1>Maquette de pirogue</h1>
+            <div class="info-meta">
+                <strong>Nom vernaculaire :</strong> peikavangan<br>
+                <strong>Culture :</strong> Yami (Tao)<br>
+                <strong>Lieu :</strong> Taïwan (Botel Tobago / Lanyu)<br>
+                <strong>Dates :</strong> début des années 1970
+            </div>
+            <div class="info-desc">
+                <p>Pirogue avec deux personnages alignés, les bras tendus. Deux poissons sont couchés à l’intérieur du
+                    bateau : probablement un poisson volant et une dorade coryphène.</p>
+                <p>Elle est désignée en yami comme « celle où l’on fait la conversation » (peiciriciringan) à la
+                    différence de la « petite pirogue pour un seul rameur ».</p>
+                <p><strong>Usage :</strong> Les figurines en terre-cuite yami peuvent être des jouets ou des objets
+                    décoratifs.</p>
+            </div>
+        </div>
+
+        <div class="exhibit-stage">
+            <img src="images/bateau-removebg-preview.png" alt="Maquette de pirogue Yami" class="canoe-img">
+        </div>
+
+        <div class="glass-panel chat-interface">
+            <div class="chat-header">
+                <h3>Guide du Musée</h3>
+                <span class="status-dot"></span>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <p> Bonjour ! Je suis votre guide. Posez-moi des questions sur cette pirogue Yami.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Posez votre question...">
+                <button id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+const encryptedKey = 'c2stcHJvai1DWVU5NDBPT1BUUnpUdlpXbzJVaHc0eU9OelpZaFk3VU43Q2NmeFM2ank1T3dyR2NMZjl0dnJCb2Y1Qk9rWmpseWdtVHlFRjdXZlQzQmxia0ZKeXN5azZjM3RtNGhBZEhteERrQjROM1JpOF9nYkNHTGpLdkZsNFI4bFhIQUI1aFBBTGxLaUhTTFRTdThPR3g2MFFrZ0JXQ2RlMEE=';
+const apiKey = atob(encryptedKey);
+export default apiKey;
